@@ -1,0 +1,112 @@
+{
+  "streams": [
+    {
+      "sync_mode": "full_refresh",
+      "destination_sync_mode": "overwrite",
+      "cursor_field": null,
+      "primary_key": null,
+      "stream": {
+        "name": "resources",
+        "supported_sync_modes": ["full_refresh", "incremental"],
+        "source_defined_cursor": false,
+        "json_schema": {
+          "type": "object",
+          "properties": {
+            "entry": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "fullUrl": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "resource": {
+                    "type": "object",
+                    "properties": {
+                      "resourceType": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "id": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "meta": {
+                        "type": "object",
+                        "properties": {
+                          "versionId": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "lastUpdated": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        }
+                      },
+                      "name": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "use": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            "family": {
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            },
+                            "given": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "gender": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "birthdate": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      }
+                    }
+                  },
+                  "search": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

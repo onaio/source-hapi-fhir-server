@@ -1,0 +1,61 @@
+documentationUrl: https://github.com/onaio/source-hapi-fhir-server
+connectionSpecification:
+  $schema: http://json-schema.org/draft-07/schema#
+  title: Hapi Fhir Server Spec
+  type: object
+  required:
+    - base_url
+    - resource_type
+    - client_id
+    - client_secret
+    - username
+    - password
+    - access_token_url
+  additionalProperties: true
+  properties:
+    base_url:
+      type: string
+      description: The base url of the Hapi FHIR server
+      title: Base Url
+      order: 0
+    resource_type:
+      type: string
+      description: The type of Fhir resource you want to pull
+      title: Resource type
+      order: 1
+    start_date:
+      type: string
+      description: Start getting data from this date
+      title: Start date
+      order: 2
+    client_id:
+      type: string
+      description: Keycloack's Client ID
+      title: Client ID
+      order: 3
+    client_secret:
+      type: string
+      description: Keycloak's Client Secret
+      title: Client Secret
+      airbyte_secret: true
+      order: 4
+    username:
+      type: string
+      description: Keycloak user's username
+      title: Username
+      order: 5
+    password:
+      type: string
+      description: Keycloack user's password
+      title: Password
+      airbyte_secret: true
+      order: 6
+    access_token_url:
+      type: string
+      description: The access token url to use to connect to the API
+      title: Access token url
+      order: 7
+
+
+
+
